@@ -1,0 +1,18 @@
+1. go to the directory where knife is installed. In this case, it would be C:/chef-starter/chef-repo/
+2. there is still error. The error code is:
+#<Thread:0x000000000bf205c0@C:/opscode/chef-workstation/embedded/lib/ruby/gems/2.5.0/gems/logging-2.2.2/lib/logging/diagnostic_context.rb:471 run> terminated with exception (report_on_exception is true):
+C:/opscode/chef-workstation/embedded/lib/ruby/2.5.0/socket.rb:227:in `getaddrinfo': getaddrinfo: No such host is known.  (SocketError)
+        from C:/opscode/chef-workstation/embedded/lib/ruby/2.5.0/socket.rb:227:in `foreach'
+        from C:/opscode/chef-workstation/embedded/lib/ruby/2.5.0/socket.rb:631:in `tcp'
+        from C:/opscode/chef-workstation/embedded/lib/ruby/gems/2.5.0/gems/net-ssh-4.2.0/lib/net/ssh/transport/session.rb:70:in `initialize'
+        from C:/opscode/chef-workstation/embedded/lib/ruby/gems/2.5.0/gems/net-ssh-4.2.0/lib/net/ssh.rb:237:in `new'
+        from C:/opscode/chef-workstation/embedded/lib/ruby/gems/2.5.0/gems/net-ssh-4.2.0/lib/net/ssh.rb:237:in `start'
+        from C:/opscode/chef-workstation/embedded/lib/ruby/gems/2.5.0/gems/net-ssh-multi-1.2.1/lib/net/ssh/multi/server.rb:186:in `new_session'
+        from C:/opscode/c
+hef-workstation/embedded/lib/ruby/gems/2.5.0/gems/net-ssh-multi-1.2.1/lib/net/ssh/multi/session.rb:488:in `next_session'
+        from C:/opscode/chef-workstation/embedded/lib/ruby/gems/2.5.0/gems/net-ssh-multi-1.2.1/lib/net/ssh/multi/server.rb:138:in `session'
+        from C:/opscode/chef-workstation/embedded/lib/ruby/gems/2.5.0/gems/net-ssh-multi-1.2.1/lib/net/ssh/multi/session_actions.rb:36:in `block (2 levels) in sessions'
+        from C:/opscode/chef-workstation/embedded/lib/ruby/gems/2.5.0/gems/logging-2.2.2/lib/logging/diagnostic_context.rb:474:in `block in create_with_logging_context'
+ERROR: Network Error: getaddrinfo: No such host is known.
+Check your knife configuration and network settings
+3. There seem to be a configuration issue. ssh is also complaining. 
